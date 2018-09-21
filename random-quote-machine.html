@@ -1,0 +1,139 @@
+<!--
+  Front-End Libraries:
+  - Bootstrap
+  - jQuery
+-->
+
+<!-- NOTES:
+Bootstrap:
+- Included font awesome content for logos
+- Organized rows within quote boxes
+- Text alignment
+- Spaced out links/buttons
+    elements used from Bootstrap:
+      - row
+      - fa
+      - fa-quote
+      - fa-twitter
+      - fa-tumblr
+      - btn
+      - text-center
+      - text-right
+      - container
+      - col-# (static, non-responsive grid spacing)
+
+jQuery:
+- Change out colors, quote, and authors
+
+CSS:
+- Specific styling done thru inline.
+- The rest of the main styling is done thru CSS page.
+
+* Bugs and challenges to work on in future revisions:
+- Shorter quotes do not center properly.
+- Produce algorithm so that color or quote does not repeat with each turn.
+- Margins for button and button containers are messy. Take a second look.
+- Do animation through jQuery instead of CSS (color transitions, fading texts)
+- Clean up css
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--Bootstrap repsonsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Random Quote Machine!</title>
+
+    <!--Bootstrap CDN-->
+    <link
+    rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"
+    >
+    <!--Font Awesome Links-->
+    <link
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"
+    >
+
+    <!--Merienda font-->
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!--jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style/quote.css">
+    <!--JavaScript-->
+    <script src="script/quote.js"></script>
+
+  </head>
+  <body class="vertical-center">
+
+    <div id='main'>
+
+      <div class="text-center title">
+        <h1>Game of Thrones Quotes</h1>
+      </div>
+
+      <!--Quote box container-->
+      <div id='quote-box'>
+
+        <!--main text-->
+          <div class="row text-center text-container">
+            <p class="text-center">
+              <span>
+                <i id="quote-mark" class="fa fa-quote-left" style="line-height:5px; color: var(--theme-color)"></i>&nbsp;
+                <span id="text"></span>
+              </span>
+            </p>
+          </div>
+
+
+        <!--author-->
+        <div class="row">
+          <div id="author" class="col-md-12 text-right" style="margin-bottom: 10px;">
+          -
+          </div>
+        </div>
+
+        <!--row of buttons-->
+        <div class="row">
+          <div class="btn-row">
+            <!--Twitter link-->
+            <div class="col-1" style="margin: 0 10px 0 0;">
+              <a id="tweet-quote" href='https://twitter.com/intent/tweet' class="btn icon" style="margin: 0 10px 0 -15px;"><i class="fa fa-twitter"></i></a>
+            </div>
+            <!--Tumblr link-->
+            <div class="col-2" style="width: 160px;">
+              <a id="tumblr" href='https://www.tumblr.com/' class="btn icon" style="margin: 0 0 0 -15px;"><i class='fa fa-tumblr' target="_blank"></i></a>
+            </div>
+            <!--space in between buttons-->
+            <div class="col-5"></div>
+            <!--New Quote Button-->
+            <div class="col-4" style="margin: 1px 0 0 1px;">
+              <button id="new-quote" type="button" name="button" class="btn"><span style='color: white;'>New Quote</span></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--my name!-->
+      <div class="by-me text-center" style="color:white;">
+        by James Pham
+      </div>
+
+    </div>
+
+      <!--supporting JS and jQuery modules. Optional extentions for Bootstrap-->
+      <!--Placed at the end to help page load faster-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>

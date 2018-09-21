@@ -1,0 +1,158 @@
+html{
+  /* variable for font and background color */
+  --theme-color: black;
+
+}
+
+body{
+  background-color: var(--theme-color);
+
+  -webkit-transition-property: background-color;
+       -moz-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: 1s;
+       -moz-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+       -moz-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+}
+
+.title{
+  color: white;
+  font-family: 'Merienda', cursive; 
+}
+
+/**************QUOTE BOX STYLING**************/
+
+/* Quote Box Container */
+#quote-box{
+  background-color: white;
+  width: 500px;
+
+  padding: 25px 50px;
+  border-radius:3px;
+  margin: auto;
+}
+
+/* Used to center quote box. Inserted in body element*/
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* All child elements of quote box's color are set to match the main
+background color
+
+Also added adding space between child elements*/
+#text, #author{
+
+  color: var(--theme-color);
+
+  -webkit-transition-property: color;
+         -moz-transition-property: color;
+           -o-transition-property: color;
+              transition-property: color;
+      -webkit-transition-duration: 1s;
+         -moz-transition-duration: 1s;
+           -o-transition-duration: 1s;
+              transition-duration: 1s;
+      -webkit-transition-timing-function: linear;
+         -moz-transition-timing-function: linear;
+           -o-transition-timing-function: linear;
+              transition-timing-function: linear;
+
+  margin: 10px 0px;
+}
+
+.fa#quote-mark{
+  font-size: 30px;
+  text-align: center;
+
+  -webkit-transition-property: color;
+       -moz-transition-property: color;
+         -o-transition-property: color;
+            transition-property: color;
+    -webkit-transition-duration: 1s;
+       -moz-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+       -moz-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+}
+
+
+/***************BUTTON STYLING****************/
+
+/* Twitter and Tumblr links, and New Quote button */
+#tweet-quote, #tumblr, #new-quote{
+  color: white;
+  background-color: var(--theme-color);
+
+  -webkit-transition-property: background-color;
+       -moz-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: 1s;
+       -moz-transition-duration: 1s;
+         -o-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+       -moz-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+/* keeps logo white with hover */
+.fa{
+  color: white;
+}
+
+a:hover, button:hover {
+  opacity: 0.4; /* slighty lighter than --theme-color */
+}
+
+.btn-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Fixed button sizes for links */
+.icon{
+  width: 40px;
+  height: 40px;
+}
+
+/**************FONT STYLING/SIZING*****************/
+
+#text{
+  font-size: 30px;
+  line-height: 1.2em;
+  font-family: cursive;
+}
+
+#author{
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.by-me{
+  font-size: 12px;
+  margin-top: 10px;
+}

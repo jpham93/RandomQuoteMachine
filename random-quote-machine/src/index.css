@@ -1,0 +1,82 @@
+#App {
+  background: #333945;
+  color: #333945;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#title {
+  color: white;
+}
+
+#quote-box {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  background: white;
+  width: 600px;
+  margin: auto;
+  padding: 30px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  position: relative;
+}
+
+#quote-box #text {
+  font-size: 26px;
+}
+
+#quote-box #author {
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#quote-box #tweet-quote {
+  margin-right: 20px;
+  background: #333945;
+}
+
+#quote-box #new-quote {
+  background: #333945;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,64 @@
+$theme-color: #333945;
+
+@mixin animation($property) {
+     -webkit-animation: $property; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: $property; /* Firefox < 16 */
+         -ms-animation: $property; /* Internet Explorer */
+          -o-animation: $property; /* Opera < 12.1 */
+             animation: $property;
+}
+
+#App {
+    background: $theme-color;
+    color: $theme-color;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    color: white;
+}
+
+#quote-box {
+    @include animation(fadein 2s);
+
+    background: white;
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    position: relative;
+
+    #text {
+        font-size: 26px;
+    }
+
+    #author {
+        text-align: right;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    #tweet-quote {
+        margin-right: 20px;
+        background: $theme-color;
+    }
+
+    #new-quote {
+        background: $theme-color;
+    }
+
+}  
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
